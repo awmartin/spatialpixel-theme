@@ -1,0 +1,9 @@
+[submodule "null"]
+	path = null
+	url = git@github.com:awmartin/null-framework.git
+[submodule "vendor/gifplayer"]
+	path = vendor/gifplayer
+	url = git@github.com:rubentd/gifplayer.git
+[submodule "vendor/skeleton"]
+	path = vendor/skeleton
+	url = git@github.com:dhg/Skeleton.git
