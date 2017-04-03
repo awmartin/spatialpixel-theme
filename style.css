@@ -1,0 +1,397 @@
+/*!
+Theme Name:     Spatial Pixel
+Theme URI:      http://github.com/awmartin/spatialpixel-theme
+Description:    A simple Wordpress theme built on the Null framework.
+Author:         Allan William Martin
+Author URI:     http://awm.io
+Version:        0.1.0
+License:        MIT License
+License URI:    https://opensource.org/licenses/MIT
+Tags:           blue, white, two-columns, fixed-width, sticky-post, custom-menu
+*/
+
+
+/* Vendor CSS */
+
+/* If you happen to use the Disqus comments plugin. */
+#disqus_thread {
+  margin-top: 60px;
+}
+
+/* gifplayer overrides. */
+ins.play-gif {
+  font-size: 16px;
+}
+
+/* Skeleton modifications */
+.container {
+  max-width: 1100px;
+}
+body {
+  font-family: 'Source Sans Pro', "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+  color: darkgray;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(99,158,245);
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid rgb(99,158,245);
+}
+
+/* Mobile image size fix. */
+.featured img,
+.thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  font-size: 2rem;
+}
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+h1 a, h2 a, h3 a {
+  color: black;
+}
+/* Large screens */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+p, li {
+  font-size: 1.8rem;
+}
+li {
+  margin-bottom: 0;
+}
+
+
+/* Start Spatial Pixel CSS */
+
+html, body {
+  background: white;
+}
+
+/* Custom header styles */
+body>header h1 {
+  font-size: 2.8rem;
+  font-family: 'Arvo';
+  font-weight: 400;
+  margin-bottom: 0;
+}
+body>header p {
+  font-size: 1.6rem;
+}
+body>header p,
+body>header form {
+  margin-bottom: 0;
+}
+body>header ul,
+body>footer ul {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+body>header li {
+  margin-bottom: 0;
+  width: 50%;
+  float: left;
+  font-size: 1.6rem;
+}
+body>header li a {
+  color: black;
+}
+body>header input[type="search"] {
+  width: 100%;
+}
+
+/* Comments and Forms */
+textarea[name=comment] {
+  width: 100%;
+}
+
+/* Widgets in the header and footer */
+body>header .widget,
+body>footer .widget {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-left: 0;
+}
+
+body>header>.container>.row>.columns {
+  margin-bottom: 20px;
+}
+
+body>footer .widget {
+  margin-bottom: 40px;
+}
+body>footer .widget:last-child {
+  margin-bottom: 0;
+}
+
+/* Large screens */
+@media (min-width: 550px) {
+  body>header .widget {
+    width: 30.6666666667%;
+    margin-left: 0;
+  }
+  body>footer .widget {
+    width: 22%;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  body>header .widget:first-child,
+  body>footer .widget:first-child {
+    margin-left: 0;
+  }
+  body>footer .widget:first-child {
+    width: 48%;
+  }
+  body>header>.container>.row>.columns {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Articles */
+article footer {
+  margin-top: 40px;
+  border-top: 1px dotted lightgray;
+  padding-top: 40px;
+}
+
+/* Widgets in the sidebars */
+aside .widget {
+  padding: 20px 0;
+  border-top: 1px dotted lightgray;
+}
+aside .widget ul {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+aside .widget ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+}
+
+/* Entries */
+.entry {
+  margin-bottom: 20px;
+}
+.entry div.featured {
+  overflow: hidden;
+  max-height: 150px;
+}
+.entry div.featured img {
+  width: 100%;
+}
+.entry>div.featured {
+  overflow: hidden;
+  margin-bottom: 1.0rem;
+}
+.entry h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Sticky entries */
+.entry.sticky {
+  border-bottom: 1px dotted lightgray;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+.entry.sticky div.featured {
+  max-height: 300px !important;
+}
+.entry.sticky h3 {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.entry.sticky p {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* Entry typography */
+.entry p {
+  font-size: 1.7rem;
+  margin-top: 0.5rem;
+}
+.entry .post-meta {
+  color: gray;
+  font-size: 1.4rem;
+}
+
+/* Special types when seen as entries. */
+.entry.aside h3 {
+  font-size: 1.6rem;
+  letter-spacing: 0;
+}
+.entry.aside p {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Entry pagination */
+.pagination>.newer {
+  float: left;
+}
+.pagination>.newer a::before {
+  content: '← ';
+}
+.pagination>.older {
+  float: right;
+}
+.pagination>.older a::after {
+  content: ' →';
+}
+
+/* Footer typography and colors */
+body>footer {
+  background-color: black;
+  color: white;
+}
+body>footer p,
+body>footer h1,
+body>footer h2,
+body>footer h3,
+body>footer h4,
+body>footer ul,
+body>footer li,
+body>footer ol,
+body>footer a {
+  color: white;
+}
+body>footer p {
+  font-size: 1.3rem;
+}
+body>footer li {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+body>footer p,
+body>footer li {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+/* For the site title. */
+body>footer h2 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+body>footer h2,
+body>footer h3 {
+  margin-bottom: 1rem;
+}
+
+
+/* Padding and tweaking */
+body>header {
+  padding: 30px 0;
+  border-bottom: 1px dotted lightgray;
+  margin-bottom: 40px;
+}
+body>footer {
+  margin-top: 40px;
+  padding: 60px 0;
+}
+main {
+  min-height: 600px; /* Addresses the weird case in which the footer has whitespace below it. */
+}
+section {
+  margin: 20px 0;
+}
+
+
+/* Breadcrumb styles. */
+.breadcrumb h1 {
+  display: inline;
+}
+.breadcrumb h1::after {
+  font-weight: 300;
+  content: ' · ';
+}
+
+ul.crumbs {
+  display: inline;
+  margin: 0;
+  height: 2.8rem;
+}
+li.crumb {
+  display: inline;
+  font-size: 1.8rem; /* Smaller screens. */
+  font-weight: 300;
+  height: 2.8rem;
+  list-style: none;
+  line-height: 0;
+}
+li.crumb:first-child::before {
+  content: none;
+}
+li.crumb::before {
+  font-weight: 300;
+  content: ' · ';
+}
+li.crumb>a {
+  color: #999999;
+}
+li.crumb>a:hover {
+  color: #669ff2;
+}
+
+
+@media (max-width: 550px) {
+  .breadcrumb h1 {
+    font-size: 1.8rem; /* Ensures that this is only used on smaller screens. */
+  }
+}
+/* Large screens */
+@media (min-width: 550px) {
+  .breadcrumb li {
+    font-size: 2.4rem; /* Should match the h1 size for larger screens. */
+  }
+}
+
+/* Single and Pages */
+.single .hero,
+.page .hero,
+.single .thumbnail,
+.page .thumbnail {
+  margin-top: 10px; /* A touch of space below the breadcrumb. */
+  margin-bottom: 20px;
+}
+
+.hero,
+.hero p {
+  font-size: 2.0rem;
+  font-weight: 300;
+}
+/* Large screens */
+@media (min-width: 550px) {
+  .hero,
+  .hero p {
+    font-size: 3.0rem;
+    font-weight: 300;
+  }
+}
