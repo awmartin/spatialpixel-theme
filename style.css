@@ -21,6 +21,7 @@ Tags:           blue, white, two-columns, fixed-width, sticky-post, custom-menu
 /* gifplayer overrides. */
 ins.play-gif {
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 /* Skeleton modifications */
