@@ -13,8 +13,8 @@ echo NullSection(
 
 echo NullLoop(array(
     'num_columns' => 3,
-    'standard' => 'vertical-linkedfeatured-title-postedon-excerpt',
-    'aside' => 'vertical-linkedexcerpt-title-postedon',
+    'standard'    => 'linkedfeatured/title/postedon/excerpt',
+    'aside'       => 'linkedexcerpt/title/postedon',
   ))
   . NullPagination();
 
