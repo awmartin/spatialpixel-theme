@@ -125,7 +125,7 @@ textarea[name=comment] {
   width: 100%;
 }
 
-/* Widgets in the header and footer */
+/* Full-widget widgets in the header and footer for mobile. */
 body>header .widget,
 body>footer .widget {
   width: 100%;
@@ -138,9 +138,11 @@ body>header>.container>.row>.columns {
   margin-bottom: 20px;
 }
 
+/* When in mobile, add some extra space between the widgets. */
 body>footer .widget {
   margin-bottom: 40px;
 }
+/* When in mobile, don't add space to the end of the footer. Looks weird. */
 body>footer .widget:last-child {
   margin-bottom: 0;
 }
@@ -151,19 +153,23 @@ body>footer .widget:last-child {
     width: 30.6666666667%;
     margin-left: 0;
   }
-  body>footer .widget {
-    width: 22%;
-    margin-left: 0;
-    margin-bottom: 0;
-  }
+
   body>header .widget:first-child,
   body>footer .widget:first-child {
     margin-left: 0;
   }
+  body>header>.container>.row>.columns {
+    margin-bottom: 0;
+  }
+
+  /* First widget of the footer, make it twice as wide. */
   body>footer .widget:first-child {
     width: 48%;
   }
-  body>header>.container>.row>.columns {
+  /* Make regular widgets 1/4 of the width. */
+  body>footer .widget {
+    width: 22%;
+    margin-left: 0;
     margin-bottom: 0;
   }
 }
@@ -175,6 +181,26 @@ article footer {
   border-top: 1px dotted lightgray;
   padding-top: 40px;
 }
+article footer p,
+article footer li {
+  font-size: 1.4rem;
+}
+/*article footer .widget {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-left: 0;
+}
+@media (min-width: 550px) {
+  article footer .widget {
+    width: 30.6666666667%;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  article footer .widget:first-child {
+    margin-left: 0;
+  }
+}*/
 
 /* Widgets in the sidebars */
 aside .widget {

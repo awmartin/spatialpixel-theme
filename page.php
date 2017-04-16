@@ -18,8 +18,8 @@ echo NullArticle(
 
   . NullContentSidebar(
       NullPostContentWithoutExcerpt()
-      . NullArticleFooter(NullPostedOn().NullComments())
-      , NullWidgetArea('Page')
+      . NullArticleFooter(NullWidgetArea('Page Footer'))
+      , NullWidgetArea('Page Sidebar')
     )
   );
 

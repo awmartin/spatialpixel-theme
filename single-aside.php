@@ -13,8 +13,8 @@ echo NullArticle(
 
   . NullContentSidebar(
       NullPostContent()
-      . NullArticleFooter(NullPostedOn().NullComments())
-      , NullWidgetArea('Post')
+      . NullArticleFooter(NullWidgetArea('Post Footer'))
+      , NullWidgetArea('Post Sidebar')
     )
   );
 

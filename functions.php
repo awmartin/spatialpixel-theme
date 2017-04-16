@@ -97,7 +97,7 @@ function register_widget_areas() {
 
   register_sidebar(
     array(
-      'name'          => 'Post',
+      'name'          => 'Post Sidebar',
       'before_widget' => '<div class="widget">',
       'after_widget'  => '</div>',
       'before_title'  => '<h3>',
@@ -107,7 +107,27 @@ function register_widget_areas() {
 
   register_sidebar(
     array(
-      'name'          => 'Page',
+      'name'          => 'Page Sidebar',
+      'before_widget' => '<div class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>',
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name'          => 'Post Footer',
+      'before_widget' => '<div class="widget">',
+      'after_widget'  => '</div>',
+      'before_title'  => '<h3>',
+      'after_title'   => '</h3>',
+    )
+  );
+
+  register_sidebar(
+    array(
+      'name'          => 'Page Footer',
       'before_widget' => '<div class="widget">',
       'after_widget'  => '</div>',
       'before_title'  => '<h3>',
@@ -267,3 +287,37 @@ function widget_title($title) {
   endif;
 }
 add_filter( 'widget_title', 'widget_title' );
+
+
+// ----------------------------------------------------------------------------------------------
+// Shortcodes that are actually useful.
+
+
+function shortcode_publicationdate_func( $attr ) {
+  $datetime = esc_attr(get_the_date('c'));
+  $dateHtml = esc_html(get_the_date());
+  return NullTag(
+    'time',
+    $dateHtml,
+    array('datetime' => $datetime));
+}
+add_shortcode('publicationdate', 'shortcode_publicationdate_func');
+
+function shortcode_author_func($attr) {
+  $authorId = get_the_author_meta( 'ID' );
+  $authorUrl = esc_url(get_author_posts_url($authorId));
+  $author = esc_html(get_the_author());
+
+  return NullTag('span',
+      NullTag('a', $author, array('class' => 'url fn n', 'rel' => 'author', 'href' => $authorUrl))
+      , array('class' => 'author vcard'));
+}
+add_shortcode('author', 'shortcode_author_func');
+
+function shortcode_comments_func($attr) {
+  return NullComments();
+}
+add_shortcode('comments', 'shortcode_comments_func');
+
+// Enable shortcodes in text widgets. Must appear *after* the shortcodes are actually defined.
+add_filter('widget_text','do_shortcode');
