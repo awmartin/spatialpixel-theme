@@ -232,8 +232,19 @@ aside .widget ul ul {
   overflow: hidden;
   margin-bottom: 1.0rem;
 }
+
+/* Entry typography */
 .entry h3 {
-  margin-bottom: 0.5rem;
+  margin: 0.4rem 0;
+}
+.entry p {
+  font-size: 1.7rem;
+  margin: 0.4rem 0;
+}
+.entry .post-meta {
+  color: gray;
+  font-size: 1.4rem;
+  margin: 0.4rem 0;
 }
 
 /* Sticky entries */
@@ -247,27 +258,14 @@ aside .widget ul ul {
 }
 .entry.sticky h3 {
   font-size: 2.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 .entry.sticky p {
   font-size: 2.5rem;
   font-weight: 300;
-  margin-bottom: 0;
-}
-
-/* Entry typography */
-.entry p {
-  font-size: 1.7rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-}
-.entry .post-meta {
-  color: gray;
-  font-size: 1.4rem;
 }
 
 /* Special types when seen as entries. */
+/* Asides. */
 .entry.aside h3 {
   font-size: 1.6rem;
   letter-spacing: 0;
@@ -275,8 +273,6 @@ aside .widget ul ul {
 .entry.aside p {
   font-size: 2.4rem;
   font-weight: 300;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
 }
 
 /* Entry pagination */
@@ -311,6 +307,9 @@ body>footer a {
 }
 body>footer p {
   font-size: 1.3rem;
+}
+body>footer p a {
+  text-decoration: underline;
 }
 body>footer li {
   font-size: 1.5rem;
