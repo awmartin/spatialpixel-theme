@@ -319,5 +319,12 @@ function shortcode_comments_func($attr) {
 }
 add_shortcode('comments', 'shortcode_comments_func');
 
+function shortcode_bio_func($attr) {
+  $authorId = get_the_author_meta( 'ID' );
+  $bio = get_the_author_meta( 'description', $authorId );
+  return esc_html($bio);
+}
+add_shortcode('bio', 'shortcode_bio_func');
+
 // Enable shortcodes in text widgets. Must appear *after* the shortcodes are actually defined.
 add_filter('widget_text','do_shortcode');

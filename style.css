@@ -422,3 +422,12 @@ li.crumb>a:hover {
     font-weight: 300;
   }
 }
+
+/* Special styles */
+
+/* Seen in a post or page footer. */
+.bio {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #999;
+}
