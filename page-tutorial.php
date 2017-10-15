@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Tutorial
+*/
 /**
  * The Template for displaying pages.
  *
@@ -12,14 +15,13 @@ the_post();
 echo NullArticle(
   NullArticleHeader(
     NullBreadcrumb(array('before' => NullPostTitle()))
-    . NullHeroText(NullFirstParagraph())
     . NullPostThumbnail('large', false)
     )
 
-  . NullContentSidebar(
-      NullPostContentWithoutExcerpt()
-      . NullArticleFooter(NullWidgetArea('Page Footer'))
-      , NullWidgetArea('Page Sidebar')
+  . NullSidebarContent(
+      NullWidgetArea('Page Sidebar')
+      ,
+      NullPostContent()
     )
   );
 

@@ -12,11 +12,12 @@ echo NullSection(
   );
 
 echo NullLoop(array(
-    'num_columns' => 3,
-    'standard'    => 'linkedfeatured/title/postedon/excerpt',
-    'aside'       => 'linkedexcerpt/title/postedon',
-  ))
-  . NullPagination();
+    'num_columns' => 1,
+    'standard'    => 'title6|excerpt4|postedon2',
+    'aside'       => 'title6|excerpt4|postedon2',
+    'mode'        => 'manual',
+    'class'       => 'fullwidth',
+  ));
 
 echo NullFooter();
 ?>

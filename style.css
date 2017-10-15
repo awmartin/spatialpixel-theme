@@ -275,6 +275,28 @@ aside .widget ul ul {
   font-weight: 300;
 }
 
+.fullwidth .entry h3,
+.fullwidth .entry .post-meta,
+.fullwidth .entry p,
+.fullwidth .entry a,
+.fullwidth .entry li
+{
+  font-size: 1.5rem !important;
+  letter-spacing: 0;
+  margin: 0;
+  display: inline;
+}
+.fullwidth .entry {
+  border-top: 1px solid lightgray;
+  margin: 0;
+  padding: 10px 0;
+}
+.fullwidth .entry div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Entry pagination */
 .pagination>.newer {
   float: left;
@@ -407,6 +429,12 @@ li.crumb>a:hover {
 .page .thumbnail {
   margin-top: 10px; /* A touch of space below the breadcrumb. */
   margin-bottom: 20px;
+}
+
+.category .hero
+{
+  margin-top: 10px; /* A touch of space below the breadcrumb. */
+  margin-bottom: 60px;
 }
 
 .hero,
