@@ -176,6 +176,9 @@ body>footer .widget:last-child {
 
 
 /* Articles */
+article img {
+  width: 100%;   /* So images don't go crazy wide in articles. */
+}
 article footer {
   margin-top: 40px;
   border-top: 1px dotted lightgray;
