@@ -13,8 +13,8 @@ echo NullSection(
 
 echo NullLoop(array(
     'num_columns' => 1,
-    'standard'    => 'title6|excerpt4|postedon2',
-    'aside'       => 'title6|excerpt4|postedon2',
+    'standard'    => 'title5|excerpt5|postedon2',
+    'aside'       => 'title5|excerpt5|postedon2',
     'mode'        => 'manual',
     'class'       => 'fullwidth',
   ));
